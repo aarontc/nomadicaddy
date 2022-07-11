@@ -6,5 +6,6 @@ RUN xcaddy build \
     --with github.com/kirsch33/realip
 
 FROM caddy:2-alpine
+LABEL org.opencontainers.image.source="https://github.com/aarontc/nomadicaddy"
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
